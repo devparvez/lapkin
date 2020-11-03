@@ -1,0 +1,598 @@
+/* ================ 
+
+Template name: paul lapkin
+Template uri:https://www.moshiur.dev/projects/paul-lapkin/
+Description:An awesome personal portfolio template.
+Author:parvez mahmud.
+Author URI:parvezmahmud.me.
+version:1.0;
+support:parvezmahmud78@gmail.com
+
+======================= */
+/* ===================== 
+CSS Index
+--------
+
+1.Google fonts
+2.Common css
+3.Reusable components
+4.Hero section
+5.About section
+6.process
+7.Experience
+8.work
+9.Testimonial
+10.Contact
+11.Footer 
+
+
+======================= */
+/* 1.Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Roboto:wght@400;500&display=swap');
+
+/* Common Css */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,body{
+    background-color:#fff;
+    color:#4c4c4c;
+    font-size:62.5%;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    /* scroll-behavior: smooth; */
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+a:link,
+a:hover{
+    text-decoration:none;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+h2{
+    font-size:4rem;
+}
+.section-title p{
+    font-size:1.6rem;
+}
+
+/* 3. starts Reusable components */
+
+.row{
+    max-width: 118rem;
+    margin:auto;
+}
+section,#about{
+    padding:12rem 0;
+}
+img{
+    width:100%;
+}
+h4{
+    font-size:1.6rem;
+    color:#fff;
+}
+p{
+    font-size:1.6rem;
+}
+.btn{
+    background:#000;
+    color:#fff;
+    font-size:1.6rem;
+    border:.2rem solid #000;
+    display:inline-block;
+    text-transform: capitalize;
+    padding:1.2rem 6rem;
+
+}
+.section-title{
+    margin-bottom:6rem;
+}
+/* ===================== 
+CSS Index
+--------
+
+4.Hero section
+
+
+======================= */
+#hero{
+ height:100vh;
+ background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(img/hero-bg.jpg) no-repeat left top /cover;
+ position:relative;
+ overflow:hidden;
+}
+.menu-icon ion-icon{
+    font-size:4.5rem;
+    color:#fff;
+    border:1px solid #fff;
+    cursor:pointer;
+}
+nav{
+    overflow:hidden;
+    position:inherit;
+    z-index:999;
+}
+.logo{
+    margin-top:4.5rem;
+    float:left;
+}
+.menu-icon{
+    float:right;
+    margin-top:4.5rem;
+}
+.hero-text-box{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    text-align:center;
+}
+h1{
+    font-size:6.5rem;
+    color:#fff;
+    text-transform: uppercase;
+    margin:0;
+    display:inline-block;
+   
+}
+h1::before{
+    content:"";
+    display:block;
+    height:.2rem;
+    background:#99cccc;
+}
+h1::after{
+    content:"";
+    display:block;
+    height:.2rem;
+    background:#99cccc;
+}
+.hero-text-box span{
+    font-size:2.1rem;
+    color:#fff;
+    margin-top:.1rem;
+    display:inline-block;
+}
+.next-section a{
+    position: absolute;
+    right:0;
+    left:0;
+    bottom:4.5rem;
+    
+    text-align:center;
+    display:block;
+    cursor: pointer;
+    z-index: 999;
+   
+}
+.next-section a ion-icon{
+    position:relative;
+    animation: 2s arrow infinite ease-in   ;
+    -webkit-animation: 2s arrow infinite ease-in   ;
+    color:#fff;
+    font-size: 5.4rem;
+}
+
+/* Animation */
+@keyframes arrow{
+    0%{
+        top:1rem;
+    }
+    50%{
+        top:3rem;
+    }
+    100%{
+        top:1rem;
+    }
+
+}
+
+/* Sticky menu */
+nav.uk-sticky-fixed{
+    background:rgba(0,0,0,.9);
+}
+nav.uk-sticky-fixed .logo,
+nav.uk-sticky-fixed .menu-icon{
+    margin:1rem;
+}
+/* Hamburger menu */
+.menu-container{
+    width:100%;
+    height:0;
+    background:rgba(0,0,0,.95);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:9999;
+    overflow:hidden;
+}
+.close-btn ion-icon{
+    color:#fff;
+    font-size:4.5rem;
+    position: absolute;
+    right:6rem;
+    top:4.5rem;
+    cursor: pointer;
+
+}
+.menu-item{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    text-align:center;
+}
+.menu-item li a{
+    color:#fff;
+    font-size:3.5rem;
+    text-transform: uppercase;
+    margin:.75rem 0;
+    display:block;
+}
+.menu-item li:hover a{
+    color:#ff3333;
+}
+#hero .particles-js-canvas-el{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:0;
+
+}
+/* ===================== 
+CSS Index
+--------
+
+5.About section
+
+
+======================= */
+#about{
+    overflow: hidden;
+}
+.about-container{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap:3rem;
+
+}
+.paul{
+    width:80%;
+    margin:auto;
+}
+.about-item .title{
+    font-size:1.8rem;
+    font-weight:700;
+}
+.about-item p{
+    font-size:1.6rem;
+}
+
+.hero-cta-btn{
+    margin-top:1.5rem;
+}
+.btn-full{
+    background:#ff3333;
+    border-color:#ff3333;
+    transition:.3s;
+    -webkit-transition:.3s;
+    -moz-transition:.3s;
+    -ms-transition:.3s;
+    -o-transition:.3s;
+}
+.btn-full:hover{
+    background:transparent;
+    color:#ff3333;
+    border-color:#ff3333;
+}
+/* ===================== 
+CSS Index
+--------
+
+6.Process section
+
+
+======================= */
+#process{
+    background:#f6f6f6;
+    text-align:center;
+}
+.process-container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:1rem;
+}
+.process-item{
+    color:#fff;
+    background:#000;
+    padding:6rem 0;
+}
+.process-item:nth-child(1){
+    background:#00ccff;
+}
+.process-item:nth-child(2){
+    background:#9966ff;
+}
+.process-item:nth-child(3){
+    background:#003366;
+}
+.process-item:nth-child(4){
+    background:#ff3333;
+}
+.process-item .icon{
+    font-size:4.5rem;
+}
+.process-item h4{
+ text-transform:uppercase;
+}
+/* ===================== 
+CSS Index
+--------
+
+7.Experience section
+
+
+======================= */
+#experience{
+    background:url(img/experience.jpg) no-repeat center /cover fixed;
+    color:#fff;
+}
+.exp-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:1.5rem;
+}
+.exp-item{
+    background:rgba(0,0,0,.9);
+    padding:3rem;
+}
+h3{
+    font-size:2.6rem;
+    color:#fff;
+}
+.exp span{
+    font-size:1.6rem;
+    
+}
+/* ===================== 
+CSS Index
+--------
+
+8.Work section
+
+
+======================= */
+#work{
+    text-align: center;
+}
+.workfilter{
+    margin-bottom:2.5rem;
+
+}
+.workfilter ul li{
+    list-style-type: none;
+    display:inline-block;
+    background:#000;
+    font-size:1.6rem;
+    text-transform:capitalize;
+    color:#fff;
+    margin:0 .5rem;
+    padding:.5rem 1.5rem;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    cursor:pointer;
+}
+.workfilter ul li:hover{
+    background:#ff3333;
+    
+}
+.work-item img{
+    height:100%;
+}
+.work-container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:1rem;
+    grid-auto-rows:minmax(20rem,auto);
+}
+.work-item:nth-child(2){
+    background:url(img/lw2.jpg) no-repeat center /cover;
+   
+}
+.work-item:nth-child(3){
+    background:url(img/lw3.jpg) no-repeat center /cover;
+   
+}
+.work-item:nth-child(4){
+    background:url(img/lw2.jpg) no-repeat center /cover;
+   
+}
+.work-item:nth-child(5){
+    background:url(img/lw3.jpg) no-repeat center /cover;
+    grid-column: 1/3;
+   
+}
+.work-item:nth-child(6){
+    background:url(img/lw2.jpg) no-repeat center /cover;
+   
+}
+.work-item:nth-child(7){
+    background:url(img/lw3.jpg) no-repeat center /cover;
+   
+}
+.work-item:nth-child(8){
+    background:url(img/lw2.jpg) no-repeat center /cover;
+   
+}
+#work .mixitup-control-active{
+    background:#ff3333;
+}
+/* ===================== 
+CSS Index
+--------
+
+9.Testimonial section
+
+
+======================= */
+#tm{
+    background:url(img/testimonial.jpg) no-repeat center top / cover;
+}
+.quote{
+   
+    width:4.5rem;
+}
+.tm-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.tm-item p{
+    margin:4rem 0;
+}
+.signature{
+    width:12rem;
+}
+.title{
+    color:#000;
+    margin: 1rem 0;
+
+}
+.role{
+    font-size:1.4rem;
+}
+/* ===================== 
+CSS Index
+--------
+
+10.Contact
+
+
+======================= */
+#contact{
+    
+        background:url(img/contact.jpg) no-repeat center top / cover fixed;
+    
+}
+.contact-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:2rem;
+}
+.contact-item{
+    background:#000000d0;
+    padding:3rem;
+}
+.contact-item:nth-child(2){
+    background:transparent;
+    padding:0;
+}
+.contact-item h3{
+    text-transform: uppercase;
+}
+form input,
+form textarea{
+    width:100%;
+    border:.1rem solid #fff;
+    padding:1rem;
+    font-size:1.6rem;
+    background:transparent;
+    color:#fff;
+    margin:.5rem 0;
+}
+::placeholder{
+    color:#fff;
+    font-size:1.6rem;
+    text-transform: uppercase;
+}
+form textarea{
+    height:23rem;
+    width:100%;
+}
+form input[type="submit"]{
+    width:24rem;
+    border-color: #ff3333;
+    background: #ff3333;
+
+}
+.submit-btn{
+    text-align: right;
+}
+.nested-contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+.nested-contact-item{
+    background:#000000d0;
+    padding:3rem;
+}
+.nested-contact-item p{
+    color:#fff;
+}
+/* ===================== 
+CSS Index
+--------
+
+11.Footer
+
+
+======================= */
+#footer{
+    color:#fff;
+    padding:3rem 0;
+    text-align: center;
+    background:#000;
+}
+.icons-list ul li{
+    display: inline-block;
+    border-right:1px solid #ddd;
+    padding: 0 1rem;
+    line-height:1;
+   
+  
+    
+}
+.icons-list ul li a{
+    display:block;
+    font-size:2.5rem;
+    color:#fff;
+    line-height:2.5rem;
+  
+    
+}
+.icons-list ul li a:hover{
+    color:#ff3333;
+}
+
+.icons-list ul li:last-child{
+    border:0;
+}
+.copyright{
+    margin-top:2rem;
+    font-size:1.6rem;
+}
